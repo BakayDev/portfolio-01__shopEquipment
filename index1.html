@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>愛媛かんきつプロジェクト</title>
+    <meta name="description" content="description text">
+
+    <meta property="og:title" content="pagetitle | sitetitle">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="http://www.xxxxxx.com/img/xxxxxx.png">
+    <meta property="og:url" content="http://www.xxxxxx.com/xxxxxx/">
+    <meta property="og:site_name" content="sitetitle">
+    <meta property="og:description" content="description text">
+
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="top">
+
+<!--/ ===== header ===== /-->
+<header class="header js-header">
+
+    <div class="header__inner">
+        <h1 class="header__title js-header__title">
+            <a href="/"><img src="/assets/img/common/ttl-kankitsuProject.svg" alt="愛媛かんきつプロジェクト"></a>
+        </h1>
+    </div>
+
+    <p class="header__btn only-sp js-header__btn"></p>
+    <div class="headerNav">
+        <nav class="gnav">
+            <ul class="gnav__list">
+                <li class="gnav__item"><a href="/report"><img src="/assets/img/common/btn-report.png" alt="研究レポート"></a>
+                </li>
+                <li class="gnav__item"><a href="/club"><img src="/assets/img/common/btn-club.png" alt="かんきつ部"></a></li>
+                <li class="gnav__item"><a href="/about"><img src="/assets/img/common/btn-aboutVarieties.png"
+                                                             alt="かんきつの種類"></a></li>
+                <li class="gnav__item"><a href="/photo-contest"><img src="/assets/img/common/btn-photoContest.png"
+                                                                     alt="フォトコンテスト"></a></li>
+            </ul>
+            <p class="gnav__ig"><a href="#"><img src="/assets/img/common/btn_instagram.svg" alt="公式インスタグラム"></a></p>
+        </nav>
+        <p class="headerNav__aifood"><a href="http://www.aifood.jp/" target="_blank" rel="noopener noreferrer">えひめ愛フード推進機構</a>
+        </p>
+        <p class="headerNav__close js-headerNav__close only-sp"></p>
+        <div class="headerNav__overlay only-sp"></div>
+    </div>
+</header>
+
+<section class="banner-section">
+  <div class="container">
+    <div class="banner-section__inner">
+      <div class="banner-section__slider">
+        <a href="#" class="banner-section__slider-item">
+          <img src="/assets/img/common/slider.png" alt="">
+        </a>
+        <a href="#" class="banner-section__slider-item">
+          <img src="/assets/img/common/slider.png" alt="">
+        </a>
+        <a href="#" class="banner-section__slider-item">
+          <img src="/assets/img/common/slider.png" alt="">
+        </a>
+        <a href="#" class="banner-section__slider-item">
+          <img src="/assets/img/common/slider.png" alt="">
+        </a>
+        <a href="#" class="banner-section__slider-item">
+          <img src="/assets/img/common/slider.png" alt="">
+        </a>
+        <a href="#" class="banner-section__slider-item">
+          <img src="/assets/img/common/slider.png" alt="">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--/ ===== main ===== /-->
+<main role="main">
+    <p class="mod-primaryBtn"><a href="#" class="mod-primaryBtn__link">もっと見る</a></p>
+</main>
+
+<!--/ ===== footer ===== /-->
+<footer class="footer">
+</footer>
+
+<!-- js -->
+<script src="/assets/js/libs/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/libs/slick.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script>
+    $(function () {
+        $(".banner-section__slider").slick({
+            dots: true,
+            prevArrow: '<button><img class="banner-arrow banner-arrow__prev" src="images/content/arrow-left.svg" alt=""></button>',
+            nextArrow: '<button><img class="banner-arrow banner-arrow__nex" src="images/content/arrow-right.svg" alt=""></button>',
+        });
+
+        $(".tab").on("click", function (e) {
+            e.preventDefault();
+            $($(this).siblings()).removeClass("tab--active");
+            $($(this).parent().siblings().find("div")).removeClass(
+                "tabs-contant--active"
+            );
+
+            $(this).addClass("tab--active");
+            $($(this).attr("href")).addClass("tabs-contant--active");
+        });
+
+        $(".products-item__favorite").on("click", function () {
+            $(this).toggleClass("products-item__favorite--active");
+        });
+        $(".products__slider").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<button><img class="products__slider-arrow products__slider-arrow__prev" src="images/arrow-black-left.svg" alt=""></button>',
+            nextArrow: '<button><img class="products__slider-arrow products__slider-arrow__nex" src="images/arrow-black-right.svg" alt=""></button>',
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
